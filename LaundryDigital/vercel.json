@@ -1,0 +1,21 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "services": {
+    "api": {
+      "root": "api",
+      "framework": "hono"
+    },
+    "laundrydigital": {
+      "root": "LaundryDigital",
+      "framework": "vite"
+    }
+  },
+  "rewrites": [
+    {
+      "source": "/(.*)",
+      "destination": {
+        "service": "api"
+      }
+    }
+  ]
+}
